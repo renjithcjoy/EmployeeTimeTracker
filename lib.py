@@ -26,10 +26,10 @@ def get_current_window_macos():
 
 """
 def get_current_window_windows():
-    import windows
-    window_handle = windows.get_active_window_handle()
-    app = windows.get_app_name(window_handle)
-    title = windows.get_window_title(window_handle)
+    import windows_window
+    window_handle = windows_window.get_active_window_handle()
+    app = windows_window.get_app_name(window_handle)
+    title = windows_window.get_window_title(window_handle)
 
     if app is None:
         app = "unknown"
@@ -48,8 +48,8 @@ def get_current_window():
 
 
 def get_current_idle_time_windows():
-    import windows
-    idletime = windows.seconds_since_last_input()
+    import windows_idle
+    idletime = windows_idle.seconds_since_last_input()
     return idletime
 
 
